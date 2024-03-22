@@ -1,0 +1,37 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Detalle Estacionamiento</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-item>
+    <ion-label>Placa</ion-label>
+    <ion-input type="text" [(ngModel)]="txt_placa"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label>Modelo</ion-label>
+    <ion-input type="text" [(ngModel)]="txt_modelo"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Fecha Ingreso</ion-label>
+    <ion-input type="date" [(ngModel)]="txt_fechaIngreso"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Hora Ingreso</ion-label>
+    <ion-input type="time" [(ngModel)]="txt_horaIngreso"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-button color="success" (click)="guardar()" expand="block" fill="clear" shape="round">
+      Guardar
+    </ion-button>
+  </ion-item>
+
+  
+  
+</ion-content>

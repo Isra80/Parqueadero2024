@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Estacionamientos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  
+  <ion-list>
+    <ion-item-sliding *ngFor="let estacionamiento of est; let i = index">
+      <ion-item (click)="irEstacionamiento(i)">
+        <ion-label>Estacionamiento {{ estacionamiento.idEst }}</ion-label>
+        <ion-label slot="end">
+          <strong>Estado: </strong> <!-- Palabra Estado en negrilla -->
+          <span [style.color]="estacionamiento.estado === '1' ? 'red' : 'green'">{{ estacionamiento.estado === '1' ? 'Ocupado' : 'Desocupado' }}</span>
+        </ion-label>
+      </ion-item>
+      <ion-item-options>
+
+        <ion-item-option color="danger" (click)="abrirModalPagar(i.toString())">Pagar</ion-item-option>
+
+        <ion-item-option color="warning" (click)="limpiarEstacionamiento(estacionamiento.idEst)">Limpiar</ion-item-option>
+
+        
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+  
+</ion-content>

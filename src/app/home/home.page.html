@@ -1,20 +1,47 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Parqueaderos
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div id="contenedor">
+    <ion-item>
+      <ion-label class="titulos">Bienvenido</ion-label>
+    </ion-item>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <ion-item>
+      <img src="assets/imagenes/parqueadero.jpg" style="display:block; width:50%; height:auto; margin-left:auto; margin-right:auto;">
+    </ion-item>
+
+    <ion-card color="danger">
+      <ion-card-header>
+        <ion-card-title style="text-align: center;"><b>Inicio de Sesion</b></ion-card-title>
+      </ion-card-header>
+      
+      <ion-card-content>
+
+        <ion-item>
+          <ion-label position="floating">Usuario</ion-label>
+          <ion-input type="text" [(ngModel)]="txt_usuario"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Clave</ion-label>
+          <ion-input type="password" [(ngModel)]="txt_clave"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-button expand="block" color="success" (click)="loggin()">
+            Ingresar
+          </ion-button>          
+        </ion-item>
+        
+      </ion-card-content>
+    </ion-card>
   </div>
+
+
 </ion-content>

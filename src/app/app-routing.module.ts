@@ -11,6 +11,23 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'parqueadero',
+    loadChildren: () => import('./parqueadero/parqueadero.module').then( m => m.ParqueaderoPageModule)
+  },
+  {
+    path: 'estacionamiento',
+    loadChildren: () => import('./estacionamiento/estacionamiento.module').then( m => m.EstacionamientoPageModule)
+  },
+  {
+    path: 'form-estacionamiento',
+    loadChildren: () => import('./form-estacionamiento/form-estacionamiento.module').then( m => m.FormEstacionamientoPageModule)
+  },
+  {
+    path: 'modal-pagar',
+    loadChildren: () => import('./modal-pagar/modal-pagar.module').then( m => m.ModalPagarPageModule)
+  },
+  
 ];
 
 @NgModule({

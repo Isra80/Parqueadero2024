@@ -1,27 +1,17 @@
-#container {
+.titulos
+{
+  margin-top: 50px;
+  font-family: Arial;
+  font-size: 50px;
+  color: #8f1e00;
   text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
 }
 
-#container strong {
+.subtitulos
+{
+  margin-top: 30px;
+  font-family: Arial;
   font-size: 20px;
-  line-height: 26px;
-}
-
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
+  color:#dd6236;
+  text-align: center;
 }

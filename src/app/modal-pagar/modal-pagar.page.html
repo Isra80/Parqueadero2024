@@ -1,0 +1,60 @@
+<!-- modal-pagar.page.html -->
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Pagar Estacionamiento</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="cerrarModal()">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label>Código de Estacionamiento: </ion-label>
+    <ion-input [(ngModel)]="codEstacionamiento" disabled></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Placa: </ion-label>
+    <ion-input [(ngModel)]="txt_placa" disabled></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Modelo</ion-label>
+    <ion-input [(ngModel)]="txt_modelo" disabled></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Fecha ingreso: </ion-label>
+    <ion-input [(ngModel)]="txt_FechaIngreso" disabled></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Hora ingreso: </ion-label>
+    <ion-input [(ngModel)]="txt_HoraIngreso" disabled></ion-input>
+  </ion-item>
+  <!---Nuevos items para este modal--->
+  <ion-item>
+    <ion-label>Fecha salida:</ion-label>
+    <ion-input type="date" [(ngModel)]="txt_fechaSalida"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label>Hora salida:</ion-label>
+    <ion-input type="time" [(ngModel)]="txt_horaSalida"></ion-input>
+  </ion-item>
+  
+  <ion-button expand="block" (click)="guardadoFinal()">Guardar</ion-button>
+
+  <ion-button expand="block" (click)="calcularTarifa()">Calcular Tarifa/Hora</ion-button>
+
+  <ion-item>
+    <ion-label>Costo Total:</ion-label>
+    <ion-input [(ngModel)]="costoTotal" disabled></ion-input>
+  </ion-item>
+
+  
+</ion-content>
